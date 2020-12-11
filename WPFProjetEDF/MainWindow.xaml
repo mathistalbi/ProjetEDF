@@ -1,0 +1,44 @@
+﻿<Window x:Class="WPFProjetEDF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFProjetEDF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Authentification" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"></TextBlock>    
+        
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <StackPanel Height="25" Orientation="Horizontal">
+                <TextBlock FontSize="15" Width="130" Text="Login"></TextBlock>
+                <TextBox FontSize="20" Width="120" Name="txtLogin"></TextBox>
+            </StackPanel>
+            <StackPanel Height="25" Orientation="Horizontal">
+                <TextBlock FontSize="15" Width="130" Text="Mot de passe"></TextBlock>
+                <TextBox FontSize="20" Width="120" Name="txtMdp" Grid.RowSpan="1" ></TextBox>
+            </StackPanel>
+            <StackPanel Height="50" Orientation="Vertical" Grid.Row="0">
+               
+            </StackPanel>
+
+            
+            <StackPanel Orientation="Vertical" Grid.Row="0">
+                <Button Content="Login" Name="btnConnexion" Click="btnConnexion_Click"></Button>
+            </StackPanel>
+            <TextBlock FontSize="15" Width="130" Text="Identifiant incorrect" Name="Textbox1" Visibility="Collapsed"></TextBlock>
+
+        </StackPanel>
+    </Grid>
+</Window>
